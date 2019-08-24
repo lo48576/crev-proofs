@@ -42,3 +42,24 @@ comment: "This crate contains a single `unsafe` block and it seems ok."
 4UH6aGlXa0sF5Fj-66zHcLen9NUnufjkJrvK_k3za52r6mdIAKOr0yWxejxb4k_oT473PBi_QnlOM09etPPwAw
 -----END CREV PACKAGE REVIEW-----
 
+-----BEGIN CREV PACKAGE REVIEW-----
+version: -1
+date: "2019-08-25T00:53:26.854533305+09:00"
+from:
+  id-type: crev
+  id: wO-tKiJm4SRMJeJSAo_gT54GAoY2KhwMGHzEZUcTmbk
+  url: "https://github.com/lo48576/crev-proofs"
+package:
+  source: "https://crates.io"
+  name: string-interner
+  version: 0.7.0
+  digest: yHdXxkDzrlfIE8CxaVQzNGw5Ol5aEfZeS2GQzlAW3Ys
+review:
+  thoroughness: medium
+  understanding: medium
+  rating: negative
+comment: "I've found unsoundness and reported it: <https://github.com/Robbepop/string-interner/issues/9>.\nThis is use after free, but user cannot access that dangling pointer directly,\nand invalid write access will not happen.\nThis issue is caused by `StringInterner::clone()` followed by `StringInterner::{get,get_or_intern}`,\nso this would affect many use cases.\nThis is the reason of negative rating.\n\nExcept for that issue, there seems no problem.\n\n* `unsafe` at line 125 is safe thanks to `assert!` at the previous line.\n* `unsafe` at line 165 is safe because\n    + `InternalStrRef`s are immutable,\n    + they have `*const str` referring inside private `Vec<Box<str>>`, and\n    + `InternalStrRef`s are not taken or copied to the outside of `StringInterner` type.\n    + (It is unsafe that `InternalStrRef` refers string owned by another interner instance,\n      and it is reported as stated above.)\n* `unsafe impl`s at line 233 and 239 is safe as commented in the source.\n    + Addresses of strings in `Vec<Box<str>>` is not changed until drop.\n    + `InternalStrRef` and its content pointers are not exposed to the users.\n    + Pointers to the strings are read-only.\n\nOnce the UB bug is fixed, this crate would be safe.\n"
+-----BEGIN CREV PACKAGE REVIEW SIGNATURE-----
+hJdTdMcUNzTP-5oPm0y0gEGM-e4h8fEq6RwO7aLAACN15CIGfFwLXy_ZgqgXGmyI_w-0uN-ToIY04jHydLxmCA
+-----END CREV PACKAGE REVIEW-----
+
