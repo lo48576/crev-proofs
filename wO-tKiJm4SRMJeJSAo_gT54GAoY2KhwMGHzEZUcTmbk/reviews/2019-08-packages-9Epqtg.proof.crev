@@ -20,3 +20,25 @@ comment: "I've sent some patches and read whole sources carefully.\nData structu
 WYPLxPHJ8ymUwSB_sbXuZVwvtb5BfqMKFM1SwjXLGbkbsDH02mxsAeOdvo7IZ6sV_abVhTlFSo5RqUYgcRDeCw
 -----END CREV PACKAGE REVIEW-----
 
+-----BEGIN CREV PACKAGE REVIEW-----
+version: -1
+date: "2019-08-24T19:52:00.608829218+09:00"
+from:
+  id-type: crev
+  id: wO-tKiJm4SRMJeJSAo_gT54GAoY2KhwMGHzEZUcTmbk
+  url: "https://github.com/lo48576/crev-proofs"
+package:
+  source: "https://crates.io"
+  name: rle-decode-fast
+  version: 1.0.1
+  revision: 5c91716f0ce8b4a702505496d096440f5b915158
+  digest: 9DA_NyzwVCzhpsj7TD1ygXjxRERd5jZ8VZLo-MJal6o
+review:
+  thoroughness: medium
+  understanding: high
+  rating: positive
+comment: "This crate contains a single `unsafe` block and it seems ok."
+-----BEGIN CREV PACKAGE REVIEW SIGNATURE-----
+4UH6aGlXa0sF5Fj-66zHcLen9NUnufjkJrvK_k3za52r6mdIAKOr0yWxejxb4k_oT473PBi_QnlOM09etPPwAw
+-----END CREV PACKAGE REVIEW-----
+
