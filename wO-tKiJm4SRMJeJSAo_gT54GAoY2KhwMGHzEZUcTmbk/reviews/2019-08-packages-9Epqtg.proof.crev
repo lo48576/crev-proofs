@@ -1,0 +1,22 @@
+-----BEGIN CREV PACKAGE REVIEW-----
+version: -1
+date: "2019-08-24T19:14:05.720753097+09:00"
+from:
+  id-type: crev
+  id: wO-tKiJm4SRMJeJSAo_gT54GAoY2KhwMGHzEZUcTmbk
+  url: "https://github.com/lo48576/crev-proofs"
+package:
+  source: "https://crates.io"
+  name: indextree
+  version: 4.0.0
+  revision: 1570522235dc1d7dd3e57abbc6581cfb0b794a95
+  digest: _dWJwlGpeSXH1k1-KnUncNHaIDYOIItP2tnRiex-IBA
+review:
+  thoroughness: high
+  understanding: medium
+  rating: positive
+comment: "I've sent some patches and read whole sources carefully.\nData structure used by this crate is simple enough.\nAdditionally it contains many assertions and has no `unsafe` code.\n"
+-----BEGIN CREV PACKAGE REVIEW SIGNATURE-----
+WYPLxPHJ8ymUwSB_sbXuZVwvtb5BfqMKFM1SwjXLGbkbsDH02mxsAeOdvo7IZ6sV_abVhTlFSo5RqUYgcRDeCw
+-----END CREV PACKAGE REVIEW-----
+
