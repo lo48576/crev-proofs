@@ -63,3 +63,24 @@ comment: "I've found unsoundness and reported it: <https://github.com/Robbepop/s
 hJdTdMcUNzTP-5oPm0y0gEGM-e4h8fEq6RwO7aLAACN15CIGfFwLXy_ZgqgXGmyI_w-0uN-ToIY04jHydLxmCA
 -----END CREV PACKAGE REVIEW-----
 
+-----BEGIN CREV PACKAGE REVIEW-----
+version: -1
+date: "2019-08-26T19:22:25.303818104+09:00"
+from:
+  id-type: crev
+  id: wO-tKiJm4SRMJeJSAo_gT54GAoY2KhwMGHzEZUcTmbk
+  url: "https://github.com/lo48576/crev-proofs"
+package:
+  source: "https://crates.io"
+  name: lazy-init
+  version: 0.3.0
+  digest: SZ_Fxs3Cm3sOhSlIqQhjpANYyz31VnMyb0O8jKZoxqE
+review:
+  thoroughness: low
+  understanding: low
+  rating: neutral
+comment: "I'm not clear it is safe, but at least it does not seem malicious.\n\nPotential unsoundness is reported at <https://github.com/khuey/lazy-init/issues/9> but it is neither fixed nor refuted.\nThis is the reason of the neutral rating.\n"
+-----BEGIN CREV PACKAGE REVIEW SIGNATURE-----
+_3W9EPAe6n3gUsvcpaH5Vbllm9CrvlN06xbAIQlpB97qNiR1S9uOTF9ZjAyQ0SQN7WnYd88NLmPrtuMgU3pkDQ
+-----END CREV PACKAGE REVIEW-----
+
