@@ -84,3 +84,31 @@ comment: "I'm not clear it is safe, but at least it does not seem malicious.\n\n
 _3W9EPAe6n3gUsvcpaH5Vbllm9CrvlN06xbAIQlpB97qNiR1S9uOTF9ZjAyQ0SQN7WnYd88NLmPrtuMgU3pkDQ
 -----END CREV PACKAGE REVIEW-----
 
+-----BEGIN CREV PACKAGE REVIEW-----
+version: -1
+date: "2019-08-30T18:12:44.428731409+09:00"
+from:
+  id-type: crev
+  id: wO-tKiJm4SRMJeJSAo_gT54GAoY2KhwMGHzEZUcTmbk
+  url: "https://github.com/lo48576/crev-proofs"
+package:
+  source: "https://crates.io"
+  name: rctree
+  version: 0.3.3
+  revision: 7e3506c96d896af1d6f1103591d695222c277681
+  digest: uM300Z8gUlzeh1zYD08EQc1_jtbO3lzkROfDvHy9mjw
+review:
+  thoroughness: low
+  understanding: medium
+  rating: positive
+comment: |
+  It is completely written in safe Rust, and I didn't find any malicious code.
+  
+  I've found a minor issue and a non-obvious behavior which is not documented (yet), but I think they are not severe and they have very easy workarounds.
+  You can see <https://github.com/RazrFalcon/rctree/issues> if you want to know them.
+  
+  In conclusion, I think this crate is safe to use.
+-----BEGIN CREV PACKAGE REVIEW SIGNATURE-----
+BfRIEPseA5TLO_BMteYPa5qDBz5T90ag_LFTnAJWh451i6q6x3Duxbky_gerLGkGZlS6yBp6dzVhvU2UVkFkAg
+-----END CREV PACKAGE REVIEW-----
+
