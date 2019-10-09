@@ -52,3 +52,27 @@ comment: |
 t3GVG224KopXpc3f212lAQbUxExSYtaD1uqNRgiVJqjrKVcA9CNqcZgLUYOJRqoyzMM515OAUuDgzTEOoOQuDQ
 -----END CREV PACKAGE REVIEW-----
 
+-----BEGIN CREV PACKAGE REVIEW-----
+version: -1
+date: "2019-10-09T14:57:33.040538162+09:00"
+from:
+  id-type: crev
+  id: wO-tKiJm4SRMJeJSAo_gT54GAoY2KhwMGHzEZUcTmbk
+  url: "https://github.com/lo48576/crev-proofs"
+package:
+  source: "https://crates.io"
+  name: string-interner
+  version: 0.6.3
+  digest: cfezgqU3Dj5saY6lmQSBZ03RR1Adj4OHZyXLqZJ4CRA
+advisories:
+  - ids:
+      - RUSTSEC-2019-0023
+    severity: medium
+    range: major
+    comment: Patched version 0.6.4 and 0.7.1 is released
+comment: |
+  
+-----BEGIN CREV PACKAGE REVIEW SIGNATURE-----
+5OzGl3tdWitaMbCXRzaEZmk-qDIpcsByxYu1YrtuRp-8Ac3z1kLH6o16UroxhTspHHPvBgOcHjDRC6yY-1DODA
+-----END CREV PACKAGE REVIEW-----
+
